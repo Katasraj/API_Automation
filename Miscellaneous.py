@@ -1,5 +1,5 @@
 '''
-Send and Manage Cookies
+Send and Manage Cookies and Sending Attachments in API
 https://httpbin.org/#/Cookies
 '''
 

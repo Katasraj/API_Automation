@@ -7,7 +7,8 @@ from payload import *
 print("************ Adding the Book ************")
 post_url = getConfig()['API']['endpoint']+APIresources.addBook
 headers = {'Content-Type':'application/json'}
-Addbook_Response = requests.post(post_url,json=addBookPayload('abcd'),headers=headers)
+query = 'select * from Books'
+Addbook_Response = requests.post(post_url,json=buildPayloadFromDB(query),headers=headers)
 
 assert Addbook_Response.status_code == 200
 print(Addbook_Response.json())
